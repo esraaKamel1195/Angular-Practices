@@ -62,7 +62,7 @@ export class MediaItemService {
 
   delete(mediaItem: any ) {
     const index = this.mediaItems.indexOf(mediaItem);
-    if( index >=0 ) {
+    if( index >= 0 ) {
       this.mediaItems.slice(index, 1)
     }
   }
