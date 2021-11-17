@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from "@angular/core";
 import { FormGroup, FormControl, Validators} from '@angular/forms';
 import { yearValidators } from './custom-validators';
-import { MediaItemService } from "./media-item.service";
+import { MediaItem, MediaItemService } from "./media-item.service";
 import { LookUpListToken } from "./provider";
 
 @Component({
@@ -30,7 +30,8 @@ export class MediaItemFormComponent implements OnInit {
       });
     }
   
-    onSubmit(mediaItem: {}) {
-      this.mediaItemservice.add(mediaItem);
+    onSubmit(mediaItem: MediaItem) {
+      this.mediaItemservice.add(mediaItem)
+      .subscribe();
     }
 }
