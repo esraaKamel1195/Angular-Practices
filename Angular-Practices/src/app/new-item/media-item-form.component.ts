@@ -1,9 +1,9 @@
 import { Component, OnInit, Inject } from "@angular/core";
 import { FormGroup, FormControl, Validators} from '@angular/forms';
 import { Router } from "@angular/router";
-import { yearValidators } from './custom-validators';
-import { MediaItem, MediaItemService } from "./media-item.service";
-import { LookUpListToken } from "./provider";
+import { yearValidators } from '../custom-validators';
+import { MediaItem, MediaItemService } from "../media-item.service";
+import { LookUpListToken } from "../provider";
 
 @Component({
     selector: 'mw-media-item-form',
