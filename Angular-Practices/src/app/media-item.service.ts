@@ -57,7 +57,7 @@ export class MediaItemService {
     }
   ];
 
-  get(medium: any) {
+  get(medium: string) {
     let getOptions = {
       params: { medium }
     };

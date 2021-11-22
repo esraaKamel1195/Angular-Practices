@@ -65,9 +65,10 @@ export class MockXHRBackend implements HttpBackend {
             request.urlWithParams.indexOf('mediaitems?medium=') >= 0 ||
             request.url === 'mediaitems'
           ) {
-              let medium: any;
+              let medium: string= '';
               if (request.urlWithParams.indexOf('?') >= 0) {
                 medium = request.urlWithParams.split('=')[1];
+                console.log(request);
                 if (medium === 'undefined') {
                   medium = '';
                 }
