@@ -5,7 +5,6 @@ import {
   HttpBackend,
 } from '@angular/common/http';
 import { Observable, Observer } from 'rxjs';
-import { MediaItem } from './media-item.service';
 
 export class MockXHRBackend implements HttpBackend {
   private mediaItems = [
@@ -68,7 +67,6 @@ export class MockXHRBackend implements HttpBackend {
               let medium: string= '';
               if (request.urlWithParams.indexOf('?') >= 0) {
                 medium = request.urlWithParams.split('=')[1];
-                console.log(request);
                 if (medium === 'undefined') {
                   medium = '';
                 }

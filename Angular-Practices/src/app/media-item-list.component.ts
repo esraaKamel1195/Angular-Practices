@@ -9,7 +9,7 @@ import { MediaItemService, MediaItem } from './media-item.service';
 })
 
 export class MediaItemListComponent implements OnInit {
-  public medium = '';
+  public medium: string = '';
   public mediaItems: MediaItem[] = [];
 
   constructor(
@@ -20,13 +20,12 @@ export class MediaItemListComponent implements OnInit {
   ngOnInit () {
     this.activateRoute.paramMap.subscribe(
       paramMap => {
-        let medium = paramMap.get('medium');
-        console.log(medium);
+        let medium: string = String(paramMap.get('medium'));
         if( medium?.toLowerCase() === 'all')
         {
           medium = '';
         }
-        this.getMediaItems(this.medium);  
+        this.getMediaItems(medium);  
       });
   }
 
